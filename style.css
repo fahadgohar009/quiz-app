@@ -1,0 +1,141 @@
+/* --------------------
+    GLOBAL STYLES
+----------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #fff;
+}
+
+/* --------------------
+    SCREEN CONTAINER
+----------------------- */
+.screen {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease-in-out;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* --------------------
+    BUTTONS
+----------------------- */
+.btn {
+    background: #00eaff;
+    color: #000;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00bcd4;
+    transform: translateY(-3px);
+}
+
+/* --------------------
+    QUESTIONS
+----------------------- */
+#question-text {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* --------------------
+    ANSWER BUTTONS
+----------------------- */
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.answer-btn {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.answer-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Correct / Wrong States */
+.correct {
+    background: #4caf50 !important;
+}
+
+.wrong {
+    background: #e53935 !important;
+}
+
+/* --------------------
+    RESULT SCREEN
+----------------------- */
+#score-text {
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#message-text {
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffeb3b;
+}
+
+/* --------------------
+    ANIMATIONS
+----------------------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+    .screen {
+        padding: 20px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
